@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../includes/head.ejs') %> 
+<body>
+    <%- include ('../includes/header.ejs') %> 
+    <section>
+        <h2>All Albums</h2>
+        <form action="/products/" method="get">
+            <input type="text" name="name" id="name" placeholder="Album Name">
+            <button type="submit">Search</button>
+        </form>
+        <ul>
+            <% products.forEach(element => { %>             
+                <li>
+                    <a href="/products/detail/<%= element.id %>">
+                        <picture><img src="/products/<%= element.image  %>" alt=""></picture>
+                        <h2><%= element.name %> - <span>$<%= element.price %></span></h2>
+                        <p><%= element.description %></p>                   
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    </section>
+</body>
+</html>

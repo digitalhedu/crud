@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../includes/head.ejs') %> 
+<body>
+    <%- include ('../includes/header.ejs') %> 
+    <section>
+        <h2><%= product.name %> - <span>$<%= product.price %></span></h2>
+        <picture><img src="/products/<%= product.image  %>" alt=""></picture>
+        <p><%= product.description %></p>
+    </section>
+</body>
+</html>

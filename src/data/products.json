@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Roxette Look Sharp!",
+    "price": 1200,
+    "description": "Look Sharp! es el segundo álbum de estudio del grupo sueco Roxette.",
+    "image": "71SxUW4ERDL._SL1200_.jpg"
+  },
+  {
+    "id": 2,
+    "name": "ABBA Waterloo",
+    "price": 2400,
+    "description": "Waterloo es el nombre del segundo de estudio del grupo sueco ABBA.",
+    "image": "81FuCd+bHcL._SL1400_.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pink floyd",
+    "price": 4000,
+    "description": "The Dark Side of the Moon —en español: El Lado Oscuro de la Luna— es un álbum conceptual, el octavo de estudio de la banda británica de rock progresivo Pink Floyd.",
+    "image": "Optical-dispersion.png"
+  },
+  {
+    "id": 4,
+    "name": "Album 1",
+    "price": 2000,
+    "description": "Album Random",
+    "image": "image-1656711293642-318428474.jpg"
+  }
+]
