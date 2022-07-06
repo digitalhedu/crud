@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../includes/head.ejs') %> 
+<body>
+    <%- include ('../includes/header.ejs') %> 
+    <section>
+        <h2>Edit Album <%= product.id %> </h2>
+        <form action="/products/edit/<%= element.id %>?m=PUT" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" id="name" placeholder="Album Name" autocomplete="off" value="<%= element.name %>">
+            <input type="number" name="price" id="price" placeholder="Price" autocomplete="off" value="<%= element.price %>">
+            <input type="file" name="image" id="image" autocomplete="off" multiple>
+            <textarea name="description" id="description" autocomplete="off"><%= element.description %></textarea>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+</body>
+</html>

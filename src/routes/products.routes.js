@@ -1,20 +1,15 @@
 const {Router} = require('express');
 const router = Router();
-const { index,detail, create, save } = require('../controllers/products.controller');
+const { index,detail, create, save,edit,modify, destroid } = require('../controllers/products.controller');
 const multer = require('multer');
-const {extname} = require('path')
-const storage = multer.diskStorage({
-  destination: (req, file, callback) => {
-    callback(null, './uploads/products');
-  },
-  filename: (req, file, callback) => {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-    callback(null, file.fieldname + '-' + uniqueSuffix +extname(file.originalname));
-  }
-});
-const upload = multer({storage: storage});
+const storage = require('../modules/storage')
+const upload = multer({storage: storage('products')});
 router.get('/', index)
 router.get('/detail/:id', detail)
 router.get('/create', create)
 router.post('/save',[upload.any()],save)
+router.get('/edit/:id', edit)
+router.put('/edit/:id',[upload.any()], modify)
+router.delete('/delete/:id',destroid)
+
 module.exports = router

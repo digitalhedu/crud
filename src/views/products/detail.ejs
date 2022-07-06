@@ -7,6 +7,12 @@
         <h2><%= product.name %> - <span>$<%= product.price %></span></h2>
         <picture><img src="/products/<%= product.image  %>" alt=""></picture>
         <p><%= product.description %></p>
+        <form action="/products/delete/<%= element.id %>?m=DELETE" method="post">
+            <button type="submit">
+                <i class="fa fa-trash"></i>
+            </button>
+        </form>
     </section>
+
 </body>
 </html>
